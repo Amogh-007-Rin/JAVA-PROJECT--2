@@ -1,5 +1,4 @@
 package bcu.cmp5332.librarysystem.model;
-
 import bcu.cmp5332.librarysystem.main.LibraryException;
 import java.time.LocalDate;
 
@@ -9,14 +8,15 @@ public class Book {
     private String title;
     private String author;
     private String publicationYear;
-
+    private String publisher;
     private Loan loan;
 
-    public Book(int id, String title, String author, String publicationYear) {
+    public Book(int id, String title, String author, String publicationYear, String publisher) {
         this.id = id;
         this.title = title;
         this.author = author;
         this.publicationYear = publicationYear;
+        this.publisher = publisher;
     }
 
     public int getId() {
@@ -49,6 +49,14 @@ public class Book {
 
     public void setPublicationYear(String publicationYear) {
         this.publicationYear = publicationYear;
+    }
+
+    public String getpublisher(){
+        return publisher;
+    }
+
+    public void setPublisher(String publisher){
+        this.publisher = publisher;
     }
 	
     public String getDetailsShort() {
