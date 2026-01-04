@@ -18,37 +18,37 @@ public class Loan {
     }
     
     // TODO: implementation of Getter and Setter methods
+
+    // Initialised getter and setter for Patron
     public Patron getPatron(){
         return this.patron;
-    }
-    
+    }    
     public void setPatron(Patron patron){
         this.patron = patron;
     }
 
+    // Initialised getter and setter for Book
     public Book getBook(){
         return this.book;
     }
-
     public void setBook(Book book){
         this.book = book;
     }
 
+    // Initialised getter and setter for StartDate
     public LocalDate getStartDate(){
         return this.startDate;
     }
-
     public void setStartDate(LocalDate startDate){
         this.startDate = startDate;
     }
 
+    // Initialised getter and setter for DueDate
     public LocalDate getDueDate(){
         return this.dueDate;
-    }
-    
+    }    
     public void setDueDate(LocalDate dueDate){
         this.dueDate = dueDate;
     }
-    // All the Getters and Setters methods are done coding
 }
  
