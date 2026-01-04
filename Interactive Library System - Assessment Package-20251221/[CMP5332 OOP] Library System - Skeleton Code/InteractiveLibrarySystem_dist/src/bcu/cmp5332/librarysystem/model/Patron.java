@@ -22,43 +22,43 @@ public class Patron {
         this.name = name;
         this.phone = phone;
         this.email = email;
-        this.isDelete = isDelete;
+        this.isDelete = false; // used as a soft delete flag
         this.borrowedBooks = borrowedBooks;
     }
     
-    // Initialised getters and setters for Patron Class
+    // Initialised getter and setter for Patron ID
     public int getPatronId(){
         return this.id;
     }
-
     public void setPatronId(int id){
         this.id = id;
     }
-
+    
+    // Initialised getter and setter for Patron Name
     public String getPatronName(){
         return this.name;
     }
-
     public void setPatronName(String name){
         this.name = name;
     }
 
+    // Initialised getter and setter for Patron Phone
     public String getPatronPhone(){
         return this.phone;
     }
-
     public void setPatronPhone(String phone){
         this.phone = phone;
     }
 
+    // Initialised getter and setter for Patron Email
     public String getPatronEmail(){
         return this.email;
-    }
-    
+    }    
     public void setPatronEmail(String email){
         this.email = email;
     }
     
+    // Initialised getter and setter for books borrowed by a patron
     public List<Book> getBorrowedBooks(){
         return this.borrowedBooks;
     }
@@ -66,12 +66,12 @@ public class Patron {
         this.borrowedBooks = borrowedBooks;
     }
 
+    // Initialised getter and setter for isDeleted which will be used as a soft delete flag
     public boolean getIsDeleted(){
         return this.isDelete;
     }
-
-    public void setIsDeleted(boolean isDelete){
-        this.isDelete = isDelete;
+    public void setIsDeleted(boolean deleted){
+        this.isDelete = deleted;
     }
 
     //////////////////////////////////////////////

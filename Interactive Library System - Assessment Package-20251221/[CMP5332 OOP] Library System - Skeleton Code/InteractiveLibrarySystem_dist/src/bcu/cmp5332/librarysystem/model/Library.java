@@ -1,5 +1,4 @@
 package bcu.cmp5332.librarysystem.model;
-
 import bcu.cmp5332.librarysystem.main.LibraryException;
 import java.util.*;
 
@@ -25,9 +24,18 @@ public class Library {
         return books.get(id);
     }
 
+    // Added a get all the patron method
+    public List<Patron> getPatrons(){
+        List<Patron> out = new ArrayList<>(patrons.values());
+        return Collections.unmodifiableList(out);
+    }
+
     public Patron getPatronByID(int id) throws LibraryException {
         // TODO: implementation here
-        return null;
+        if(!patrons.containsKey(id)){
+            throw new LibraryException("There is no such patron present with that ID");
+        }
+        return patrons.get(id);
     }
 
     public void addBook(Book book) {
@@ -39,6 +47,10 @@ public class Library {
 
     public void addPatron(Patron patron) {
         // TODO: implementation here
+        if (patrons.containsKey(patron.getPatronId())){
+            throw new IllegalArgumentException("Duplicate patron ID");
+        }
+        patrons.put(patron.getPatronId(), patron);
     }
 }
  
