@@ -19,7 +19,7 @@ public class Book {
         this.author = author;
         this.publicationYear = publicationYear;
         this.publisher = publisher;
-        this.loan = loan;
+        this.loan = loan; 
         this.isDeleted = false;
         // Created an isDelete instance variable to impliment the concept of soft delete
     }
