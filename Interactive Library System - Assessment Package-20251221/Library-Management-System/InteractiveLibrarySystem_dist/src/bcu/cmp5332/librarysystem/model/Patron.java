@@ -73,7 +73,35 @@ public class Patron {
         this.isDelete = deleted;
     }
 
-    //////////////////////////////////////////////
+    //////////////////////////////////////////////  
+    
+    // Method to get short information about the patron
+    public String getPatronDetailsShort(){
+        
+        String shortPatronDetails =
+                  "SHORT INFORMATION ABOUT THE PATRON :-,\n"
+                + "PATRON ID :- " + id + "\n"
+                + "NAME :- " + name + "\n"
+                + "EMAIL :- " + email;
+                                
+        return shortPatronDetails;
+    }
+    
+    // Method to get detailed information about the Patron
+    public String getPatronDetailsLong(){
+        
+        String completePatronDetails =
+                  "DETAILED INFORMATION ABOUT THE PATRON :-,\n"
+                + "PATRON ID :- " + id + "\n"
+                + "NAME :- " + name + "\n"
+                + "EMAIL :- " + email + "\n"
+                + "PHONE NUMBER :- " + phone + "\n"
+                + "CURRENT ACTIVE LIBRARY MEMBER :- " + this.isDelete + "\n"
+                + "BORROWED BOOKS :- " + borrowedBooks + "\n";
+                
+        return completePatronDetails;
+    }
+   
 
     public void borrowBook(Book book, LocalDate dueDate) throws LibraryException {
         // TODO: implementation here
@@ -90,5 +118,13 @@ public class Patron {
     public void addBook(Book book) {
         // TODO: implementation here
     }
+
+    @Override
+    public String toString(){
+        return "\nPatron [ID: " + id + ", Name: " + name + "Email : " + email + "]\n";
+    }
+
 }
+
+
  

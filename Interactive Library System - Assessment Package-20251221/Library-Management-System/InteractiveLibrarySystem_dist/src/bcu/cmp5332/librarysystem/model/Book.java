@@ -100,10 +100,10 @@ public class Book {
                   "DETAILED INFORMATION ABOUT THE BOOK :-,\n"
                 + "BOOK ID :- " + id + "\n"
                 + "TITLE :- " + title + "\n"
-                + "AUTHOR :-" + author + "\n"
-                + "PUBLICATION YEAR :-" + publicationYear + "\n"
-                + "BOOK PUBLISHER :-" + publisher + "\n"
-                + "AVAILABLE :-" + loan + "\n";
+                + "AUTHOR :- " + author + "\n"
+                + "PUBLICATION YEAR :- " + publicationYear + "\n"
+                + "BOOK PUBLISHER :- " + publisher + "\n"
+                + "AVAILABLE :- " + loan + "\n";
         return completeBookDetails;
     }
 
