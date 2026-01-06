@@ -9,29 +9,29 @@ public class AddPatron implements Command {
 
     private final String name;
     private final String phone;
+    private final String email;
+    private boolean isDeleted;
 
-    public AddPatron(String name, String phone) {
+    public AddPatron(String name, String phone, String email, boolean isDeleted) {
         this.name = name;
         this.phone = phone;
+        this.email = email; // added new property email into patron object.
+        this.isDeleted = false; // added new property isDeleted to track the soft delete process.
     }
 
     @Override
     public void execute(Library library, LocalDate currentDate) throws LibraryException {
         // TODO: implementation here
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter Patron ID: ");
-        String id = sc.nextLine();
-        System.out.println("Enter Patron Name: ");
-        String name = sc.nextLine();
-        System.out.println("Enter Patron Phone Number: ");
-        String phoneNumber = sc.nextLine();
-        System.out.println("Enter Patron Email: ");
-        String email = sc.nextLine();
-        System.out.println();
-        Patron patronNew = new Patron(id, name, phoneNumber, email, false, null);
-        Library library2 = new Library();
-        library2.addPatron(patronNew);
-
+        int libId = 0;
+        if(library.getPatrons().size() > 0){
+            int lastIndex = library.getPatrons().size() - 1;
+            libId = library.getPatrons().get(lastIndex).getPatronId();
+        }
+        Patron patron = new Patron(libId, name, phone, email, false, null);
+        library.addPatron(patron);
+        System.out.println("Patron added sucessfully");
+        System.out.println("Added patron details");
+        System.out.println(patron.getPatronDetailsShort());
     }
 }
  

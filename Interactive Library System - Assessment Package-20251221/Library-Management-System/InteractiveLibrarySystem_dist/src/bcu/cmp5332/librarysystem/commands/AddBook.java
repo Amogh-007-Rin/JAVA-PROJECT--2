@@ -10,11 +10,15 @@ public class AddBook implements  Command {
     private final String title;
     private final String author;
     private final String publicationYear;
+    private final String publisher;
+    private boolean isDeleted;
 
-    public AddBook(String title, String author, String publicationYear) {
+    public AddBook(String title, String author, String publicationYear, String publisher, boolean isDeleted) {
         this.title = title;
         this.author = author;
         this.publicationYear = publicationYear;
+        this.publisher = publisher; // Added new feature publisher into the book object.
+        this.isDelete = false;  // Added new feature isDeleted feature to track the soft delete process. 
     }
     
     @Override
@@ -22,9 +26,9 @@ public class AddBook implements  Command {
         int maxId = 0;
     	if (library.getBooks().size() > 0) {
     		int lastIndex = library.getBooks().size() - 1;
-            maxId = library.getBooks().get(lastIndex).getId();
+            maxId = library.getBooks().get(lastIndex).getBookByID();
     	}
-        Book book = new Book(++maxId, title, author, publicationYear);
+        Book book = new Book(++maxId, title, author, publicationYear, publisher, isDeleted);
         library.addBook(book);
         System.out.println("Book #" + book.getId() + " added.");
     }
