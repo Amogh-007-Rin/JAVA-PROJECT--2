@@ -113,16 +113,33 @@ public class Book {
 
     public String getStatus() {
         // TODO: implementation here
-        return null;
+        if(!isOnLoan()){
+            return "Available";
+        }
+        else if(isOnLoan()){
+            LocalDate dueDate = getDueDate();
+            return "The Book Is On Loan Until : " + dueDate.toString();
+        }
+        else{
+            return "No Information About The Selected Book";
+        }
     }
 
     public LocalDate getDueDate() {
         // TODO: implementation here
-        return null;
+        if(loan == null){
+            return null;
+        }
+        LocalDate dueDate = loan.getDueDate();
+        return dueDate;
     }
 
     public void setDueDate(LocalDate dueDate) throws LibraryException {
         // TODO: implementation here
+        if(loan == null){
+            throw new LibraryException("Book Is Not On Loan, Its Available To Borrow");
+        }
+        loan.setDueDate(dueDate);
     }
 
     public void returnToLibrary() {

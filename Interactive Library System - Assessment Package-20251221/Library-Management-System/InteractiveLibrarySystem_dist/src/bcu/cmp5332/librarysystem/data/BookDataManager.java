@@ -1,5 +1,4 @@
 package bcu.cmp5332.librarysystem.data;
-
 import bcu.cmp5332.librarysystem.model.Book;
 import bcu.cmp5332.librarysystem.model.Library;
 import bcu.cmp5332.librarysystem.main.LibraryException;
@@ -25,7 +24,10 @@ public class BookDataManager implements DataManager {
                     String title = properties[1];
                     String author = properties[2];
                     String publicationYear = properties[3];
-                    Book book = new Book(id, title, author, publicationYear);
+                    String publisher = properties[4];
+                    boolean isDeleted = Boolean.parseBoolean(properties[5]);
+                    // Loan loan = properties[6];
+                    Book book = new Book(id, title, author, publicationYear, publisher,isDeleted, null);
                     library.addBook(book);
                 } catch (NumberFormatException ex) {
                     throw new LibraryException("Unable to parse book id " + properties[0] + " on line " + line_idx
