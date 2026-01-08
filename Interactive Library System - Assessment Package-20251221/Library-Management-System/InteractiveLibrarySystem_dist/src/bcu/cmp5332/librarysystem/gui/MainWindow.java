@@ -2,6 +2,7 @@ package bcu.cmp5332.librarysystem.gui;
 
 import bcu.cmp5332.librarysystem.model.Book;
 import bcu.cmp5332.librarysystem.model.Library;
+import bcu.cmp5332.librarysystem.model.Patron;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.List;
@@ -142,11 +143,9 @@ public class MainWindow extends JFrame implements ActionListener {
             
             
         } else if (ae.getSource() == memView) {
-            
-            
+            displayPatrons();
         } else if (ae.getSource() == memAdd) {
-            
-            
+            new AddPatronWindow(this);
         } else if (ae.getSource() == memDel) {
             
             
@@ -158,13 +157,33 @@ public class MainWindow extends JFrame implements ActionListener {
         // headers for the table
         String[] columns = new String[]{"Title", "Author", "Pub Date", "Status"};
 
-        Object[][] data = new Object[booksList.size()][6];
+        Object[][] data = new Object[booksList.size()][4];
         for (int i = 0; i < booksList.size(); i++) {
             Book book = booksList.get(i);
             data[i][0] = book.getTitle();
             data[i][1] = book.getAuthor();
             data[i][2] = book.getPublicationYear();
             data[i][3] = book.getStatus();
+        }
+
+        JTable table = new JTable(data, columns);
+        this.getContentPane().removeAll();
+        this.getContentPane().add(new JScrollPane(table));
+        this.revalidate();
+    }
+
+    public void displayPatrons() {
+        List<Patron> patronsList = library.getPatrons();
+        String[] columns = new String[]{"ID", "Name", "Phone", "Email", "Status"};
+
+        Object[][] data = new Object[patronsList.size()][5];
+        for (int i = 0; i < patronsList.size(); i++) {
+            Patron p = patronsList.get(i);
+            data[i][0] = p.getPatronId();
+            data[i][1] = p.getPatronName();
+            data[i][2] = p.getPatronPhone();
+            data[i][3] = p.getPatronEmail();
+            data[i][4] = p.getIsDeleted() ? "Deleted" : "Active";
         }
 
         JTable table = new JTable(data, columns);
