@@ -10,7 +10,7 @@ import java.util.Scanner;
 
 public class BookDataManager implements DataManager {
     
-    private final String RESOURCE = "./resources/data/books.txt";
+    private final String RESOURCE = "Interactive Library System - Assessment Package-20251221\\Library-Management-System\\InteractiveLibrarySystem_dist\\resources\\data\\books.txt";
     
     @Override
     public void loadData(Library library) throws IOException, LibraryException {

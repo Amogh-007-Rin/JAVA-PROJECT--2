@@ -6,7 +6,7 @@ import java.io.IOException;
 
 public class LoanDataManager implements DataManager {
     
-    public final String RESOURCE = "./resources/data/loans.txt";
+    public final String RESOURCE = "Interactive Library System - Assessment Package-20251221\\Library-Management-System\\InteractiveLibrarySystem_dist\\resources\\data\\loans.txt";
 
     @Override
     public void loadData(Library library) throws IOException, LibraryException {
