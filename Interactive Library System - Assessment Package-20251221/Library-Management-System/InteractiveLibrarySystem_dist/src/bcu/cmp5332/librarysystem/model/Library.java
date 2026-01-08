@@ -52,7 +52,14 @@ public class Library {
         }
         patrons.put(patron.getPatronId(), patron);
     }
-
+    
+    // New Feature To Remove a Patron From The Library
+    public void removePatron(int patronId){
+        if(!patrons.containsKey(patronId)){
+            throw new IllegalArgumentException("Patron Id Miss Match or PatronId Does Not Exist");
+        }
+        patrons.remove(patronId);
+    }
     
 }
  

@@ -22,12 +22,12 @@ public class AddPatron implements Command {
     @Override
     public void execute(Library library, LocalDate currentDate) throws LibraryException {
         // TODO: implementation here
-        int libId = 0;
+        int patId = 0;
         if(library.getPatrons().size() > 0){
             int lastIndex = library.getPatrons().size() - 1;
-            libId = library.getPatrons().get(lastIndex).getPatronId();
+            patId = library.getPatrons().get(lastIndex).getPatronId();
         }
-        Patron patron = new Patron(libId, name, phone, email, false, null);
+        Patron patron = new Patron(patId, name, phone, email, false, null);
         library.addPatron(patron);
         System.out.println("Patron added sucessfully");
         System.out.println("Added patron details");

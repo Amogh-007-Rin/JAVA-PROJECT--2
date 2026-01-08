@@ -30,6 +30,7 @@ public class AddBook implements  Command {
     	}
         Book book = new Book(++maxId, title, author, publicationYear, publisher, isDeleted, null);
         library.addBook(book);
+        System.out.println("Book Added With Details :-");
         System.out.println("Book #" + book.getId() + " added.");
     }
 }

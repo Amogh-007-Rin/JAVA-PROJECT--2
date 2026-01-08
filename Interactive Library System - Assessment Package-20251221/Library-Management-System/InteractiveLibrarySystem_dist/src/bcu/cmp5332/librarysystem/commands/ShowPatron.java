@@ -1,5 +1,34 @@
 package bcu.cmp5332.librarysystem.commands;
 
-public class ShowPatron {
-    
+import bcu.cmp5332.librarysystem.main.LibraryException;
+import bcu.cmp5332.librarysystem.model.Library;
+import bcu.cmp5332.librarysystem.model.Patron;
+import bcu.cmp5332.librarysystem.model.Book;
+import java.time.LocalDate;
+import java.util.List;
+
+public class ShowPatron implements Command {
+
+    private final int patronId;
+
+    public ShowPatron(int patronId) {
+        this.patronId = patronId;
+    }
+
+    @Override
+    public void execute(Library library, LocalDate currentDate) throws LibraryException {
+        Patron patron = library.getPatronByID(patronId);
+        System.out.println("Patron #" + patron.getPatronId() + " - " + patron.getPatronName());
+        System.out.println("Phone: " + patron.getPatronPhone());
+        List<Book> books = patron.getBorrowedBooks();
+        if (books.isEmpty()) {
+            System.out.println("No books borrowed.");
+        } else {
+            System.out.println("Borrowed books:");
+            for (Book book : books) {
+                System.out.println("  " + book.getDetailsShort());
+            }
+            System.out.println("Patron Has Borrowed " + books.size() + " book(s) borrowed");
+        }
+    }
 }
