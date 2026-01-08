@@ -20,6 +20,13 @@ public class Main {
         while (true) {
             System.out.print("> ");
             String line = br.readLine();
+            if(line == null){
+                break;
+            }
+            line = line.trim();
+            if(line.length() == 0){
+                continue;
+            }
             if (line.equals("exit")) {
                 break;
             }

@@ -146,3 +146,6 @@ public class Book {
         loan = null;
     }
 }
+
+
+// Book schema file
