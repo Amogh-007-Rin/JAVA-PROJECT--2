@@ -103,20 +103,39 @@ public class Patron {
     }
    
 
-    public void borrowBook(Book book, LocalDate dueDate) throws LibraryException {
+    public void borrowBook(Book book, LocalDate startDate, LocalDate dueDate) throws LibraryException {
         // TODO: implementation here
+        if(book.isOnLoan()){
+            throw new LibraryException("Book Is Already On Loan, Not Available To Borrow");
+        }
+        // Loan Object Is Created Which Will Hold The Reference Of The Book Which is Loaned
+        Loan loan = new Loan(this, book, startDate, dueDate);
+        book.setLoan(loan);
+        addBook(book);
     }
 
     public void renewBook(Book book, LocalDate dueDate) throws LibraryException {
         // TODO: implementation here
+        if (!books.contains(book) || !book.isOnLoan()){
+            throw new LibraryException("The Selected Book Is Not On Loan To This Patron");
+        }
+        book.setDueDate(dueDate);
     }
 
     public void returnBook(Book book) throws LibraryException {
         // TODO: implementation here
+        if(!books.contains(book)){
+            throw new LibraryException("This Patron Have'nt Borrowed this Book");
+        }
+        book.returnToLibrary();
+        books.remove(book);
     }
     
     public void addBook(Book book) {
         // TODO: implementation here
+        if(!books.contains(book)){
+           books.add(book);
+        }
     }
 
     @Override
