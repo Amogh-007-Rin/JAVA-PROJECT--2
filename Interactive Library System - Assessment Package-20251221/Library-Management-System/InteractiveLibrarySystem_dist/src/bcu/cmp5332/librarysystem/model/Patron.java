@@ -79,10 +79,7 @@ public class Patron {
     public String getPatronDetailsShort(){
         
         String shortPatronDetails =
-                  "SHORT INFORMATION ABOUT THE PATRON :-,\n"
-                + "PATRON ID :- " + id + "\n"
-                + "NAME :- " + name + "\n"
-                + "EMAIL :- " + email;
+         "PATRON ID :- " + id + ", NAME :- " + name + ", EMAIL :- " + email;
                                 
         return shortPatronDetails;
     }
@@ -104,8 +101,10 @@ public class Patron {
    
 
     public void borrowBook(Book book, LocalDate startDate, LocalDate dueDate) throws LibraryException {
-        // TODO: implementation here
-        if(book.isOnLoan()){
+        if (book.getIsDeleted()) {
+            throw new LibraryException("Book is deleted and cannot be borrowed");
+        }
+        if (book.isOnLoan()){
             throw new LibraryException("Book Is Already On Loan, Not Available To Borrow");
         }
         // Loan Object Is Created Which Will Hold The Reference Of The Book Which is Loaned

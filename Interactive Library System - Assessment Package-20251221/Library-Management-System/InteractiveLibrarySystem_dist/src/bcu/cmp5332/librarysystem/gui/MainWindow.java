@@ -134,21 +134,43 @@ public class MainWindow extends JFrame implements ActionListener {
             new AddBookWindow(this);
             
         } else if (ae.getSource() == booksDel) {
-            
-            
+            String s = javax.swing.JOptionPane.showInputDialog(this, "Enter book ID to delete:", "Delete Book", javax.swing.JOptionPane.QUESTION_MESSAGE);
+            if (s == null) return; // cancelled
+            try {
+                int bid = Integer.parseInt(s.trim());
+                int rc = javax.swing.JOptionPane.showConfirmDialog(this, "Delete book #" + bid + "?", "Confirm Delete", javax.swing.JOptionPane.YES_NO_OPTION);
+                if (rc != javax.swing.JOptionPane.YES_OPTION) return;
+                bcu.cmp5332.librarysystem.commands.Command cmd = new bcu.cmp5332.librarysystem.commands.DeleteBook(bid);
+                cmd.execute(library, java.time.LocalDate.now());
+                displayBooks();
+            } catch (NumberFormatException ex) {
+                javax.swing.JOptionPane.showMessageDialog(this, "Invalid book id", "Error", javax.swing.JOptionPane.ERROR_MESSAGE);
+            } catch (bcu.cmp5332.librarysystem.main.LibraryException ex) {
+                javax.swing.JOptionPane.showMessageDialog(this, ex.getMessage(), "Error", javax.swing.JOptionPane.ERROR_MESSAGE);
+            }
         } else if (ae.getSource() == booksIssue) {
-            
-            
+            new IssueBookWindow(this);
         } else if (ae.getSource() == booksReturn) {
-            
-            
+            new ReturnBookWindow(this);
         } else if (ae.getSource() == memView) {
             displayPatrons();
         } else if (ae.getSource() == memAdd) {
             new AddPatronWindow(this);
         } else if (ae.getSource() == memDel) {
-            
-            
+            String s = javax.swing.JOptionPane.showInputDialog(this, "Enter patron ID to delete:", "Delete Patron", javax.swing.JOptionPane.QUESTION_MESSAGE);
+            if (s == null) return;
+            try {
+                int pid = Integer.parseInt(s.trim());
+                int rc = javax.swing.JOptionPane.showConfirmDialog(this, "Delete patron #" + pid + "?", "Confirm Delete", javax.swing.JOptionPane.YES_NO_OPTION);
+                if (rc != javax.swing.JOptionPane.YES_OPTION) return;
+                bcu.cmp5332.librarysystem.commands.Command cmd = new bcu.cmp5332.librarysystem.commands.DeletePatron(pid);
+                cmd.execute(library, java.time.LocalDate.now());
+                displayPatrons();
+            } catch (NumberFormatException ex) {
+                javax.swing.JOptionPane.showMessageDialog(this, "Invalid patron id", "Error", javax.swing.JOptionPane.ERROR_MESSAGE);
+            } catch (bcu.cmp5332.librarysystem.main.LibraryException ex) {
+                javax.swing.JOptionPane.showMessageDialog(this, ex.getMessage(), "Error", javax.swing.JOptionPane.ERROR_MESSAGE);
+            }
         }
     }
 

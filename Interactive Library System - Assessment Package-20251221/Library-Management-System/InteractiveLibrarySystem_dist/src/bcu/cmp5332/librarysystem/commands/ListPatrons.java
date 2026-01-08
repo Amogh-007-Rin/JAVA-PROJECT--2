@@ -12,9 +12,11 @@ public class ListPatrons implements Command {
     @Override
     public void execute(Library library, LocalDate currentDate) throws LibraryException{
         List<Patron> patrons = library.getPatrons();
+        System.out.println("----------ALL PATRON DETAILS---------");
         for (Patron patron : patrons){
-            System.out.println(patron.getPatronDetailsShort());
-            System.out.println(patrons.size() + " patron(s)");
+            System.out.println(patron.getPatronDetailsShort());            
         }
+        System.out.println();
+        System.out.println("Total Number Of Registered Patrons :- " + patrons.size());
     }
 }

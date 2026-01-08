@@ -20,6 +20,8 @@ public class ShowPatron implements Command {
         Patron patron = library.getPatronByID(patronId);
         System.out.println("Patron #" + patron.getPatronId() + " - " + patron.getPatronName());
         System.out.println("Phone: " + patron.getPatronPhone());
+        System.out.println("Email: " + patron.getPatronEmail());
+        System.out.println();
         List<Book> books = patron.getBorrowedBooks();
         if (books.isEmpty()) {
             System.out.println("No books borrowed.");

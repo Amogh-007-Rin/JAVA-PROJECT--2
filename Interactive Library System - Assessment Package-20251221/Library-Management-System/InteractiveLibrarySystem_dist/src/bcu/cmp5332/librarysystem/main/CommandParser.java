@@ -32,8 +32,9 @@ public class CommandParser {
                 String author = br.readLine();
                 System.out.print("Publication Year: ");
                 String publicationYear = br.readLine();
+                System.out.print("publisher Details: ");
                 String publisher = br.readLine();                
-                return new AddBook(title, author, publicationYear, publisher, false);
+                return new AddBook(title, author, publicationYear, publisher,  false);
 
             } else if (cmd.equals("addpatron")) {
                 BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

@@ -20,8 +20,8 @@ public class Book {
         this.publicationYear = publicationYear;
         this.publisher = publisher;
         this.loan = loan; 
-        this.isDeleted = false;
-        // Created an isDelete instance variable to impliment the concept of soft delete
+        this.isDeleted = isDeleted;
+        // Created an isDelete instance variable to implement the concept of soft delete
     }
 
     // Initialised getter and setter for Book Id
@@ -103,7 +103,7 @@ public class Book {
                 + "AUTHOR :- " + author + "\n"
                 + "PUBLICATION YEAR :- " + publicationYear + "\n"
                 + "BOOK PUBLISHER :- " + publisher + "\n"
-                + "AVAILABLE :- " + loan + "\n";
+                + "ON-LOAN :- " + loan + "\n";
         return completeBookDetails;
     }
 
@@ -112,15 +112,15 @@ public class Book {
     }
 
     public String getStatus() {
-        // TODO: implementation here
-        if(!isOnLoan()){
+        if (getIsDeleted()) {
+            return "Deleted";
+        }
+        if (!isOnLoan()) {
             return "Available";
-        }
-        else if(isOnLoan()){
+        } else if (isOnLoan()) {
             LocalDate dueDate = getDueDate();
-            return "The Book Is On Loan Until : " + dueDate.toString();
-        }
-        else{
+            return "On loan until " + dueDate.toString();
+        } else {
             return "No Information About The Selected Book";
         }
     }
@@ -146,6 +146,3 @@ public class Book {
         loan = null;
     }
 }
-
-
-// Book schema file

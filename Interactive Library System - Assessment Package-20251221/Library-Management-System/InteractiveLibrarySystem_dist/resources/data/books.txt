@@ -1,4 +1,7 @@
 15::Pride and Prejudice::Jane Austen::1813::Dasten Martin::null::false::
-16::Java Programming::RedHat Oracle::2020::2020::null::false::
+16::Java Programming::RedHat Oracle::2020::2020::bcu.cmp5332.librarysystem.model.Loan@6adede5::false::
 17::Python Programming::James mark::2000::2000::null::false::
 18::springboot microframework::redHat oracle::2000::::null::false::
+19::AI and Machine Learning Handbook::Amogh Dath::2025::::null::false::
+20::maths for Ai::Amogh Dath::2025::reader.io::null::false::
+21::physics::Amogh::2020::NCERT::null::false::

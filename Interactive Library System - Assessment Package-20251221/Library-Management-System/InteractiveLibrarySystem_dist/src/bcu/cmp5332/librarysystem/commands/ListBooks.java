@@ -15,7 +15,7 @@ public class ListBooks implements Command {
         for (Book book : books) {
             System.out.println(book.getDetailsShort());
         }
-        System.out.println(books.size() + " book(s)");
+        System.out.println("Total book(s): " + books.size());
     }
 }
  
