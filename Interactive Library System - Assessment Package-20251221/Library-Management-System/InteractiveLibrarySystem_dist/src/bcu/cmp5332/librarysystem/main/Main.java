@@ -3,10 +3,10 @@ package bcu.cmp5332.librarysystem.main;
 import bcu.cmp5332.librarysystem.data.LibraryData;
 import bcu.cmp5332.librarysystem.commands.Command;
 import bcu.cmp5332.librarysystem.model.Library;
-
 import java.io.*;
 import java.time.LocalDate;
 
+// FULLY IMPLEMENTED MAIN CLASS
 public class Main {
 
     public static void main(String[] args) throws IOException, LibraryException {
