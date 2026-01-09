@@ -5,7 +5,6 @@ import bcu.cmp5332.librarysystem.model.Book;
 import bcu.cmp5332.librarysystem.model.Library;
 import bcu.cmp5332.librarysystem.model.Loan;
 import bcu.cmp5332.librarysystem.model.Patron;
-
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.time.LocalDate;
@@ -13,6 +12,7 @@ import java.util.Scanner;
 import java.io.File;
 import java.io.FileWriter;
 
+// FULLY IMPLEMENTED LOAN-DATA-MANAGER CLASS
 public class LoanDataManager implements DataManager {
     
     public final String RESOURCE = "Interactive Library System - Assessment Package-20251221\\Library-Management-System\\InteractiveLibrarySystem_dist\\resources\\data\\loans.txt";

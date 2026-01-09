@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+// FULLY COMPLETED LIBRARY-DATA CLASS TO MANAGE LIBRARY DATA
 public class LibraryData {
     
     private static final List<DataManager> dataManagers = new ArrayList<>();

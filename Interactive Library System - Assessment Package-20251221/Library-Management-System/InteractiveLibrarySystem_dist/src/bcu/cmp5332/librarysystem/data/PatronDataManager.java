@@ -12,6 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+// FULLY IMPLEMENTED PATRON-DATA-MANAGER CLASS
 public class PatronDataManager implements DataManager {
 
     private final String RESOURCE = "Interactive Library System - Assessment Package-20251221\\Library-Management-System\\InteractiveLibrarySystem_dist\\resources\\data\\patrons.txt";

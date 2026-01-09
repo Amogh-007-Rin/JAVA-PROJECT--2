@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Scanner;
 
+// FULLY IMPLEMENTED BOOK-DATA-MANAGER CLASS
 public class BookDataManager implements DataManager {
     
     private final String RESOURCE = "Interactive Library System - Assessment Package-20251221\\Library-Management-System\\InteractiveLibrarySystem_dist\\resources\\data\\books.txt";
