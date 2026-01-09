@@ -14,6 +14,7 @@ public class Patron {
     private String email;
     private boolean isDelete;
     private List<Book> borrowedBooks = new ArrayList<>();
+    private static final int MAX_BORROWED_BOOKS = 2;
 
     
     // TODO: implement constructor here
@@ -103,6 +104,9 @@ public class Patron {
    
 
     public void borrowBook(Book book, LocalDate startDate, LocalDate dueDate) throws LibraryException {
+        if (books.size() >= MAX_BORROWED_BOOKS) {
+            throw new LibraryException("Patron has reached the maximum number of borrowed books (" + MAX_BORROWED_BOOKS + ")");
+        }
         if (book.getIsDeleted()) {
             throw new LibraryException("Book is deleted and cannot be borrowed");
         }
