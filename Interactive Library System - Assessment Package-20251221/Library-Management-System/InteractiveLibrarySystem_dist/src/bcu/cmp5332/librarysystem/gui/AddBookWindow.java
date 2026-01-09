@@ -17,6 +17,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.UIManager;
 
+// FULLY IMPLEMENTED ADD-BOOK-WINDOW CLASS TO ADD A BOOK INTO THE LIBRARY USING GUI APPLICATION
 public class AddBookWindow extends JFrame implements ActionListener {
 
     private MainWindow mw;

@@ -17,6 +17,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.UIManager;
 
+// FULLY IMPLEMENTED ISSUE-BOOK-WINDOW CLASS TO ISSUE A SELECTED BOOK USING GUI APPLICATION
 public class IssueBookWindow extends JFrame implements ActionListener {
 
     private MainWindow mw;

@@ -14,6 +14,7 @@ import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.UIManager;
 
+// FULLY IMPLEMENTED MAIN-WINDOW CLASS TO CREATE A GUI APPLICATION -- SEMI PARENT CLASS
 public class MainWindow extends JFrame implements ActionListener {
 
     private JMenuBar menuBar;

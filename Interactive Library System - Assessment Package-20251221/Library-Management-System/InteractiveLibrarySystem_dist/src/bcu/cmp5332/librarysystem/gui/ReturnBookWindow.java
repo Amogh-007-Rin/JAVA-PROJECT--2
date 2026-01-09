@@ -17,6 +17,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.UIManager;
 
+// FULLY IMPLEMENTED RETURN-BOOK-WINDOW CLASS TO RETURN A BORROWED BOOK BACK INTO THE LIBRARY USING GUI APPLICATION
 public class ReturnBookWindow extends JFrame implements ActionListener {
 
     private MainWindow mw;

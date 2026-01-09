@@ -17,6 +17,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.UIManager;
 
+// FULLY IMPLEMENTED ADD-PATRON-WINDOW CLASS TO ADD A PATRON INTO THE LIBRARY USING GUI APPLICATION
 public class AddPatronWindow extends JFrame implements ActionListener {
 
     private MainWindow mw;
