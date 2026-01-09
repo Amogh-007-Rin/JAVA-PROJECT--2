@@ -4,6 +4,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
+// FULLY IMPLEMENTED PATRON CLASS
 public class Patron {
     
     private int id;
@@ -75,7 +76,7 @@ public class Patron {
 
     //////////////////////////////////////////////  
     
-    // Method to get short information about the patron
+    // Implemented a Method to get short information about the patron
     public String getPatronDetailsShort(){
         
         String shortPatronDetails =
@@ -84,7 +85,7 @@ public class Patron {
         return shortPatronDetails;
     }
     
-    // Method to get detailed information about the Patron
+    //Implemented a Method to get detailed information about the Patron
     public String getPatronDetailsLong(){
         
         String completePatronDetails =
@@ -112,7 +113,8 @@ public class Patron {
         book.setLoan(loan);
         addBook(book);
     }
-
+    
+    // Implemented renew-book method to renew the book to a patron
     public void renewBook(Book book, LocalDate dueDate) throws LibraryException {
         // TODO: implementation here
         if (!books.contains(book) || !book.isOnLoan()){
@@ -120,7 +122,8 @@ public class Patron {
         }
         book.setDueDate(dueDate);
     }
-
+    
+    // Implemented return-book method to return a borrowed book into the library
     public void returnBook(Book book) throws LibraryException {
         // TODO: implementation here
         if(!books.contains(book)){
@@ -130,6 +133,7 @@ public class Patron {
         books.remove(book);
     }
     
+    // Implemented a add-book method to add a book into the library
     public void addBook(Book book) {
         // TODO: implementation here
         if(!books.contains(book)){

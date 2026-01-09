@@ -24,7 +24,7 @@ public class AddPatron implements Command {
         // TODO: implementation here
         int patId = 0;
         // generate next id (max existing id + 1)
-        for (bcu.cmp5332.librarysystem.model.Patron p : library.getPatrons()) {
+        for (Patron p : library.getPatrons()) {
             if (p.getPatronId() > patId) patId = p.getPatronId();
         }
         patId++;

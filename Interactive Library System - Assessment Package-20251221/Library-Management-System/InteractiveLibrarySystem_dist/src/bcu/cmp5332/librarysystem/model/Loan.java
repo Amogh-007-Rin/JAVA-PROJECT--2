@@ -2,13 +2,15 @@ package bcu.cmp5332.librarysystem.model;
 
 import java.time.LocalDate;
 
+// FULLY IMPLEMENTED LOAN CLASS
 public class Loan {
     
     private Patron patron;
     private Book book;
     private LocalDate startDate;
     private LocalDate dueDate;
-
+    
+    // CONSTRUCTOR FOR LOAN CLASS
     public Loan(Patron patron, Book book, LocalDate startDate, LocalDate dueDate) {
         // TODO: implementation here
         this.patron = patron;

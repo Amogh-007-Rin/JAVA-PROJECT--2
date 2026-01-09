@@ -2,6 +2,7 @@ package bcu.cmp5332.librarysystem.model;
 import bcu.cmp5332.librarysystem.main.LibraryException;
 import java.util.*;
 
+// FULLY IMPLEMENTED LIBRARY CLASS
 public class Library {
     
     private final int loanPeriod = 7;
@@ -37,14 +38,16 @@ public class Library {
         }
         return patrons.get(id);
     }
-
+    
+    // IMPLEMENTED ADD-BOOK METHOD TO ADD A BOOK INTO LIBRARY
     public void addBook(Book book) {
         if (books.containsKey(book.getId())) {
             throw new IllegalArgumentException("Duplicate book ID.");
         }
         books.put(book.getId(), book);
     }
-
+    
+    // IMPLEMENTED ADD-PATRON METHOD TO ADD A PATRON INTO THE LIBRARY
     public void addPatron(Patron patron) {
         // TODO: implementation here
         if (patrons.containsKey(patron.getPatronId())){
@@ -53,7 +56,7 @@ public class Library {
         patrons.put(patron.getPatronId(), patron);
     }
     
-    // New Feature To Remove a Patron From The Library
+    //IMPLEMENTED A NEW FEATURE TO REMOVE A PATRON FORM THE LIBRARY
     public void removePatron(int patronId){
         if(!patrons.containsKey(patronId)){
             throw new IllegalArgumentException("Patron Id Miss Match or PatronId Does Not Exist");

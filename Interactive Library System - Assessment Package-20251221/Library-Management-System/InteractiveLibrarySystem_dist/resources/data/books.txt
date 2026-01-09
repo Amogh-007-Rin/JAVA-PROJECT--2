@@ -1,7 +1,20 @@
-15::Pride and Prejudice::Jane Austen::1813::Dasten Martin::null::false::
-16::Java Programming::RedHat Oracle::2020::2020::bcu.cmp5332.librarysystem.model.Loan@6adede5::false::
-17::Python Programming::James mark::2000::2000::null::false::
-18::springboot microframework::redHat oracle::2000::::null::false::
-19::AI and Machine Learning Handbook::Amogh Dath::2025::::null::false::
-20::maths for Ai::Amogh Dath::2025::reader.io::null::false::
-21::physics::Amogh::2020::NCERT::null::false::
+1::Clean Code::Robert C. Martin::2008::::null::false::
+2::The Pragmatic Programmer::Andrew Hunt::1999::::null::false::
+3::Introduction to Algorithms::Thomas H. Cormen::1990::::null::false::
+4::Design Patterns::Erich Gamma::1994::::null::false::
+5::You Don't Know JS::Kyle Simpson::2015::::null::false::
+6::The Mythical Man-Month::Frederick P. Brooks Jr.::1975::::null::false::
+7::Head First Java::Kathy Sierra::2003::::null::false::
+8::Code Complete::Steve McConnell::1993::::null::false::
+9::Structure and Interpretation of Computer Programs::Harold Abelson::1985::::null::false::
+10::Effective Java::Joshua Bloch::2001::::null::false::
+11::Refactoring::Martin Fowler::1999::::null::false::
+12::Working Effectively with Legacy Code::Michael Feathers::2004::::null::false::
+13::Cracking the Coding Interview::Gayle Laakmann McDowell::2008::::null::false::
+14::Designing Data-Intensive Applications::Martin Kleppmann::2017::::null::false::
+15::Eloquent JavaScript::Marijn Haverbeke::2011::::bcu.cmp5332.librarysystem.model.Loan@66480dd7::false::
+16::Deep Learning::Ian Goodfellow::2016::::null::false::
+17::Programming Pearls::Jon Bentley::1986::::null::false::
+18::The C Programming Language::Brian Kernighan::1978::::null::false::
+19::Artificial Intelligence: A Modern Approach::Stuart Russell::1995::::null::false::
+20::Domain-Driven Design::Eric Evans::2003::::null::false::
