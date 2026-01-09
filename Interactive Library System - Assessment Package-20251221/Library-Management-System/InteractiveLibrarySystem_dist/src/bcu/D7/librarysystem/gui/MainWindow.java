@@ -1,5 +1,8 @@
 package bcu.D7.librarysystem.gui;
 
+import bcu.D7.librarysystem.model.Book;
+import bcu.D7.librarysystem.model.Library;
+import bcu.D7.librarysystem.model.Patron;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.List;
@@ -10,10 +13,6 @@ import javax.swing.JMenuItem;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.UIManager;
-
-import bcu.D7.librarysystem.model.Book;
-import bcu.D7.librarysystem.model.Library;
-import bcu.D7.librarysystem.model.Patron;
 
 // FULLY IMPLEMENTED MAIN-WINDOW CLASS TO CREATE A GUI APPLICATION -- SEMI PARENT CLASS
 public class MainWindow extends JFrame implements ActionListener {
@@ -199,9 +198,9 @@ public class MainWindow extends JFrame implements ActionListener {
 
     public void displayPatrons() {
         List<Patron> patronsList = library.getPatrons();
-        String[] columns = new String[]{"ID", "Name", "Phone", "Email", "Status"};
+        String[] columns = new String[]{"ID", "Name", "Phone", "Email", "Status", "BorrowedBooks"};
 
-        Object[][] data = new Object[patronsList.size()][5];
+        Object[][] data = new Object[patronsList.size()][6];
         for (int i = 0; i < patronsList.size(); i++) {
             Patron p = patronsList.get(i);
             data[i][0] = p.getPatronId();
@@ -209,6 +208,8 @@ public class MainWindow extends JFrame implements ActionListener {
             data[i][2] = p.getPatronPhone();
             data[i][3] = p.getPatronEmail();
             data[i][4] = p.getIsDeleted() ? "Deleted" : "Active";
+            data[i][5] = p.getBorrowedBooks();
+            
         }
 
         JTable table = new JTable(data, columns);

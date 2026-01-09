@@ -1,9 +1,8 @@
 package bcu.D7.librarysystem.model;
+import bcu.D7.librarysystem.main.LibraryException;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
-
-import bcu.D7.librarysystem.main.LibraryException;
 
 // FULLY IMPLEMENTED PATRON CLASS
 public class Patron {
@@ -25,6 +24,7 @@ public class Patron {
         this.email = email;
         this.isDelete = false; // used as a soft delete flag
         this.borrowedBooks = borrowedBooks;
+        
     }
     
     // Initialised getter and setter for Patron ID
@@ -61,7 +61,7 @@ public class Patron {
     
     // Initialised getter and setter for books borrowed by a patron
     public List<Book> getBorrowedBooks(){
-        return this.borrowedBooks;
+        return this.books;
     }
     public void setBorrowedBooks(List<Book> borrowedBooks){
         this.borrowedBooks = borrowedBooks;

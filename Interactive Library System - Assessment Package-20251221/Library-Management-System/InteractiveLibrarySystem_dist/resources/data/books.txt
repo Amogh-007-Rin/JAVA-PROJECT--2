@@ -1,4 +1,4 @@
-1::Clean Code::Robert C. Martin::2008::::null::false::
+1::Clean Code::Robert C. Martin::2008::::bcu.D7.librarysystem.model.Loan@4517d9a3::false::
 2::The Pragmatic Programmer::Andrew Hunt::1999::::null::false::
 3::Introduction to Algorithms::Thomas H. Cormen::1990::::null::false::
 4::Design Patterns::Erich Gamma::1994::::null::false::
@@ -12,7 +12,7 @@
 12::Working Effectively with Legacy Code::Michael Feathers::2004::::null::false::
 13::Cracking the Coding Interview::Gayle Laakmann McDowell::2008::::null::false::
 14::Designing Data-Intensive Applications::Martin Kleppmann::2017::::null::false::
-15::Eloquent JavaScript::Marijn Haverbeke::2011::::bcu.cmp5332.librarysystem.model.Loan@66480dd7::false::
+15::Eloquent JavaScript::Marijn Haverbeke::2011::::null::false::
 16::Deep Learning::Ian Goodfellow::2016::::null::false::
 17::Programming Pearls::Jon Bentley::1986::::null::false::
 18::The C Programming Language::Brian Kernighan::1978::::null::false::
