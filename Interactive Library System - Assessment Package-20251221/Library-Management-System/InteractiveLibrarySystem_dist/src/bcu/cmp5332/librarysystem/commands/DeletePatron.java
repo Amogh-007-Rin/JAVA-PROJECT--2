@@ -4,6 +4,7 @@ import bcu.cmp5332.librarysystem.main.LibraryException;
 import bcu.cmp5332.librarysystem.model.Library;
 import java.time.LocalDate;
 
+// FULLY IMPLEMENTED DELETE-PATRON CLASS TO DELETE A PATRON FROM LIBRARY
 public class DeletePatron implements Command {
 
     private final int patronId;

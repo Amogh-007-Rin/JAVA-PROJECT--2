@@ -5,6 +5,7 @@ import bcu.cmp5332.librarysystem.model.Patron;
 import java.time.LocalDate;
 import java.util.Scanner;
 
+// FULLY IMPLEMENTED ADD-PATRON CLASS TO ADD A PATRON INTO LIBRARY
 public class AddPatron implements Command {
 
     private final String name;

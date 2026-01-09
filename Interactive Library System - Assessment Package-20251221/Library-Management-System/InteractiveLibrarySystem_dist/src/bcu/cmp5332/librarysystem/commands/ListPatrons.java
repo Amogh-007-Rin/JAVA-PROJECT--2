@@ -2,11 +2,11 @@ package bcu.cmp5332.librarysystem.commands;
 
 import java.time.LocalDate;
 import java.util.List;
-
 import bcu.cmp5332.librarysystem.main.LibraryException;
 import bcu.cmp5332.librarysystem.model.Library;
 import bcu.cmp5332.librarysystem.model.Patron;
 
+// FULLY IMPLEMENTED LIST-PATRONS CLASS TO LIST ALL THE PATRONS PRESENT IN THE LIBRARY
 public class ListPatrons implements Command {
     
     @Override

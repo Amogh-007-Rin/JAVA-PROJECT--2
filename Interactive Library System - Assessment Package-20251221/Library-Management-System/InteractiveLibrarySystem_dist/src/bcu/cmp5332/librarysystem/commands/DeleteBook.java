@@ -5,6 +5,7 @@ import bcu.cmp5332.librarysystem.model.Book;
 import bcu.cmp5332.librarysystem.model.Library;
 import java.time.LocalDate;
 
+// FULLY IMPLEMENTED DELETE-BOOK CLASS TO DELETE A BOOK FROM LIBRARY
 public class DeleteBook implements Command {
 
     private final int bookId;
